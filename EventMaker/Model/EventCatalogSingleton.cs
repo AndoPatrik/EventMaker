@@ -14,7 +14,7 @@ namespace EventMaker.Model
 
         private EventCatalogSingleton()
         {
-            _events = new ObserverableCollection<Event>();
+            _events = new ObservableCollection<Event>();
         }
 
         public static EventCatalogSingleton GetInstance()
@@ -27,7 +27,6 @@ namespace EventMaker.Model
             return Instance;
         }
 
-        public void SetEvents (ObservableCollection<Event> events)
         {
             _events = events;
         }
@@ -60,4 +59,6 @@ namespace EventMaker.Model
 
         #endregion
     }
+
+    
 }

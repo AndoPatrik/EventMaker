@@ -7,7 +7,7 @@ using Windows.Globalization.DateTimeFormatting;
 
 namespace EventMaker.Model
 {
-    class Event
+    public class Event
     {
         private DateTime _dateTime;
         private int _id;
