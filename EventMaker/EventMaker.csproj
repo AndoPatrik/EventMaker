@@ -127,14 +127,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+
+
+    <Folder Include="Persistency\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.6</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converter\" />
-    <Folder Include="Persistency\" />
-    <Folder Include="View\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

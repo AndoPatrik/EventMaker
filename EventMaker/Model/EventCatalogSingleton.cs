@@ -27,16 +27,17 @@ namespace EventMaker.Model
             return Instance;
         }
 
-        public ObservableCollection<Event> SetEvents(ObservableCollection<Event> events)
         {
             _events = events;
         }
 
-
-
         public ObservableCollection<Event> GetEvent()
         {
             return _events;
+        }
+
+        private class ObserverableCollection<T> : ObservableCollection<Event>
+        {
         }
 
         #region Operations
