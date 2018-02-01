@@ -95,14 +95,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Common\RelayCommand.cs" />
-    <Compile Include="Handler\EventHandler.cs" />
-    <Compile Include="Model\Event.cs" />
-    <Compile Include="Model\EventCatalogSingleton.cs" />
-    <Compile Include="Model\NotifyPropertyChange.cs" />
-    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\EventVM.cs" />
+    <Compile Include="View\EventPage.xaml.cs">
+      <DependentUpon>EventPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -127,10 +123,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-
-
+    <Folder Include="Handler\" />
+    <Folder Include="Model\" />
     <Folder Include="Persistency\" />
-    <Folder Include="View\" />
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\EventPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
