@@ -6,10 +6,11 @@ namespace EventMaker.Model
 {
     public class NotifyPropertyChange
     {
+
        
         public event NotifyPropertyChange PropertyChanged;
 
-       
+
         protected virtual void NotifyPropertyChange([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
