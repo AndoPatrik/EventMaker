@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,12 +9,12 @@ namespace EventMaker.Model
 {
     class EventCatalogSingleton
     {
-        private ObserverableCollection<Event> _events;
-        private static EventCatalogSingleton Instance { get , set; }
+        private ObservableCollection<Event> _events;
+        private static EventCatalogSingleton Instance { get; set; }
 
         private EventCatalogSingleton()
         {
-            _events = new ObserverableCollection<Event>();
+            _events = new ObservableCollection<Event>();
         }
 
         public static EventCatalogSingleton GetInstance()
@@ -26,12 +27,14 @@ namespace EventMaker.Model
             return Instance;
         }
 
-        public ObserverableCollection<Event> SetEvents(ObserverableCollection<Event> events)
+        public ObservableCollection<Event> SetEvents(ObservableCollection<Event> events)
         {
             _events = events;
         }
 
-        public ObserverableCollection<Event> GetEvent()
+
+
+        public ObservableCollection<Event> GetEvent()
         {
             return _events;
         }
@@ -55,4 +58,6 @@ namespace EventMaker.Model
 
         #endregion
     }
+
+    
 }
